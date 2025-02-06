@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+/* Son atajos tipo constantes */
+:root {
+    --color-primario: #000000;
+    --color-secundario: #8aa89d;
+    --color-terciario: #abff77;
+    --color-hover: #000000;
+
+    --fuente-krona: 'Krona One', sans-serif;
+    --fuente-montserrat: 'Montserrat', sans-serif;
+}
+
+/* Para aplicar a todo el html */
+* {
+    padding: 0;
+    margin: 0;
+
+    font-family: var(--fuente-montserrat);
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1f1f1f;
+    color: var(--color-secundario);
+    display: flex;
+    justify-content: space-between; /* Distribuye el contenido */
+    align-items: center; /* Alinea verticalmente los elementos */
+    padding: 10px 20px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    z-index: 1000; /* Mantén el encabezado siempre visible */
+}
+
+/* Ajustar el logo */
+.header h1 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--color-terciario);
+}
+
+/* Menú principal */
+.nav .menu {
+    display: flex;
+    gap: 20px; /* Espaciado entre enlaces */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav .menu li a {
+    text-decoration: none;
+    color: var(--color-secundario);
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav .menu li a:hover,
+.nav .menu li a.active {
+    color: var(--color-terciario);
+    font-weight: bold;
+}
+
+/* Botón de menú para móviles */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--color-secundario);
+    cursor: pointer;
+}
+
+
+.main { /*modificar esta parte */
+    padding: 5% 10%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px; 
+}
+
+.presentacion{
+    padding: 3% 5% 0% 0%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 85px;
+}
+
+.presentacion__contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentacion__contenido h1{
+    font-size: 2rem;
+    font-family: var(--fuente-krona);
+}
+
+.destaque {
+    font-weight: bold;
+    color: var(--color-terciario); ;
+}
+
+.presentacion__contenido p{
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserrat);
+}
+
+.imagen_presentacion img{
+    width: 300px;
+    height: auto;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2); /* Sombra blanca para resaltar */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen_presentacion img:hover{
+    transform: translateY(-10px); /* Eleva la imagen */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+/* Contenedor de certificados */
+.certificados-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Espaciado reducido entre contenedores */
+    padding: 20px;
+}
+
+/* Contenedor de cada certificado */
+.certificados h1{
+    padding: 4% 0% 4% 0%;
+    
+}
+.certificados-container a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-primario);
+    width: 160px; /* Tamaño uniforme */
+    height: 240px; /* Altura uniforme */
+    background-color: var(--color-secundario); /* Fondo para contenedores compactos */
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificados-container a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Imagen del certificado */
+.certificados-container img {
+    width: 100%; /* Ajusta al tamaño del contenedor */
+    height: auto; /* Mantiene proporciones */
+    max-height: 120px; /* Tamaño máximo para imágenes */
+    border-radius: 5px;
+}
+
+/* Títulos debajo de las imágenes */
+.certificados-container p {
+    margin-top: 10px;
+    font-size: 0.9rem; /* Tamaño compacto */
+    font-weight: bold;
+    text-align: center;
+    color: var(--color-primario);
+    word-wrap: break-word; /* Permite dividir palabras largas */
+    line-height: 1.2; /* Espaciado entre líneas */
+    max-height: 50px; /* Limita la altura del texto */
+    overflow: hidden; /* Oculta texto sobrante */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos si el texto es demasiado largo */
+    padding: 12%;
+}
+
+.blanco{
+    color: var(--color-secundario);
+}
+
+.proyectos h1{
+    padding: 4% 0% 4% 0%;
+}
+
+.proyectos h2{
+    font-size: 1.2rem;
+}
+
+.proyectos-container {
+    display: flex;
+    flex-direction: column; /* Distribuir los proyectos en columna */
+    gap: 20px; /* Espacio entre los proyectos */
+    padding: 20px;
+}
+
+.proyectos-container a {
+    display: flex;
+    flex-direction: row; /* Colocar imagen y texto en fila */
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-primario);
+    background-color: var(--color-secundario);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 20px; /* Espacio entre imagen y texto */
+}
+
+.proyectos-container a:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.proyectos-container img {
+    width: 150px; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    border-radius: 8px;
+}
+
+.proyectos-container .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px; /* Espacio entre título y descripción */
+}
+
+
+.proyectos-container .text-container p{
+    margin: 0;
+    font-size: 1rem;
+    color: var(--color-primario);
+    text-align: left;
+    word-wrap: break-word;
+}
+.conocimientos h1{
+    padding: 4% 0% 4% 0%;
+}
+
+.conocimientos {
+    text-align: left;
+    padding: 4% 0%;
+}
+
+.conocimientos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espaciado uniforme */
+}
+
+.conocimiento-item {
+    background-color: var(--color-secundario);
+    border-radius: 8px;
+    padding: 20px; /* 🔥 Más espacio interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 calc(12.5% - 20px); /* 8 columnas en escritorio */
+    max-width: 120px; /* Evita que crezcan demasiado */
+    text-align: center;
+}
+
+.conocimiento-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.conocimiento-item img {
+    width: 99px;
+    height: 99px;
+    margin-bottom: 10px;
+}
+
+.conocimiento-item p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+.footer {
+    background-color: #5b5b5b76;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+}
+
+.social-links img {
+    width: 30px; /* Ajusta el tamaño de los iconos */
+    height: auto;
+}
+
+
+/* Estilos para pantallas pequeñas (dispositivos móviles) */
+@media (max-width: 768px) {
+    /* Ajustar el padding del header */
+    .header {
+        padding: 0 5%;
+    }
+
+    .header h1 {
+        font-size: 1.2rem; /* Reduce el tamaño del texto */
+        padding: 5% 0;
+        text-align: center; /* Centra el texto */
+    }
+
+    .nav .menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 200px;
+        background-color: var(--color-primario);
+        padding: 20px;
+        gap: 10px;
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav .menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Ajustar el main */
+    .main {
+        padding: 5%;
+        gap: 20px; /* Reduce el espacio entre elementos */
+    }
+
+    /* Ajustes para la presentación */
+    .presentacion {
+        flex-direction: column; /* Cambia a diseño vertical */
+        gap: 20px; /* Espaciado entre elementos */
+    }
+
+    .presentacion__contenido {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        text-align: center; /* Centra el texto */
+        gap: 20px; /* Reduce el espaciado interno */
+    }
+
+    .presentacion__contenido h1 {
+        font-size: 1.5rem; /* Reduce el tamaño del encabezado */
+    }
+
+    .presentacion__contenido p {
+        font-size: 1rem; /* Ajusta el tamaño del texto */
+        text-align: justify;
+    }
+
+    .imagen_presentacion img {
+        width: 200px; /* Reduce el tamaño de la imagen */
+    }
+
+    /* Ajustar la galería de certificados */
+    .certificados-container {
+        flex-direction: column; /* Cambia a diseño vertical */
+        gap: 10px; /* Reduce el espacio entre certificados */
+        align-items: center;
+    }
+
+    .certificados-container a {
+        width: 90%; /* Aumenta el ancho para ocupar casi toda la pantalla */
+        max-width: 300px; /* Limita el tamaño máximo */
+        height: auto; /* Deja que el contenedor ajuste su altura automáticamente */
+    }
+
+    .certificados-container img {
+        max-height: 100px; /* Reduce la altura máxima de las imágenes */
+    }
+
+    .certificados-container p {
+        font-size: 0.8rem; /* Reduce el tamaño del texto */
+        line-height: 1.1; /* Ajusta el espaciado entre líneas */
+    }
+
+    /* Ajustar contenedor de proyectos */
+    .proyectos-container {
+        display: flex;
+        flex-direction: column; /* Cambia la orientación a columna */
+        gap: 20px; /* Espacio entre cada proyecto */
+        padding: 20px;
+    }
+
+    /* Estilo para cada proyecto */
+    .proyectos-container a {
+        display: flex;
+        flex-direction: column; /* Elementos en orden vertical */
+        align-items: center; /* Centra los elementos */
+        text-decoration: none;
+        color: var(--color-primario);
+        background-color: var(--color-secundario);
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        gap: 10px; /* Espacio entre la imagen, título y descripción */
+        width: 100%; /* Ocupa el ancho completo */
+        max-width: 300px; /* Limita el tamaño máximo */
+        margin: 0 auto; /* Centra el proyecto en el contenedor */
+    }
+
+    .proyectos-container a:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Imagen del proyecto */
+    .proyectos-container img {
+        width: 100%; /* Ocupa el ancho disponible */
+        height: auto; /* Mantiene proporciones */
+        border-radius: 8px;
+    }
+
+    .proyectos h2 {
+        font-size: 1.2rem; /* Reduce el tamaño del encabezado */
+        text-align: center;
+    }
+
+    /* Contenedor de texto (título y descripción) */
+    .proyectos-container .text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra el texto */
+        gap: 5px; /* Espacio entre título y descripción */
+    }
+
+    .proyectos-container .text-container p {
+        margin: 0;
+        font-size: 1rem; /* Ajusta el tamaño del texto */
+        color: var(--color-primario);
+        text-align: center; /* Centra el texto */
+    }
+
+    .proyectos-container .text-container p:first-child {
+        font-weight: bold; /* Aplica negrita al título */
+    }
+
+    .conocimientos-container {
+        grid-template-columns: repeat(2, minmax(120px, 1fr)); /* 🔥 Espacio más balanceado */
+        gap: 20px; /* 🔥 Más espacio entre columnas en móviles */
+        padding: 10px;
+    }
+
+    .conocimiento-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    .conocimiento-item img {
+        width: 80px; /* 🔥 Tamaño más pequeño para evitar superposición */
+        height: auto;
+    }
+
+    .conocimiento-item p {
+        font-size: 0.9rem; /* 🔥 Reducimos el texto */
+    }
+}
