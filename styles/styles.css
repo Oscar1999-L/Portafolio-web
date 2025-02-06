@@ -323,6 +323,20 @@ body{
     height: auto;
 }
 
+/* Para navegadores Webkit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Para Firefox */
+html {
+    scrollbar-width: none;
+}
+
+/* Para Internet Explorer y Edge */
+body {
+    -ms-overflow-style: none;
+}
 
 /* Estilos para pantallas pequeñas (dispositivos móviles) */
 @media (max-width: 768px) {

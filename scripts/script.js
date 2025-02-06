@@ -58,6 +58,11 @@ const certificados = [
         nombre: "Spring AI: Integra una aplicación con OpenAI"
     },
     {
+        id: "https://talkingmethod.com/es/certificate/oscar-ramirez-ojeda-6152/?shared=true",
+        image: "assets/ingl.svg",
+        nombre: "Certificado Inglés: Talking Method"
+    },
+    {
         id: "https://app.aluracursos.com/program/certificate/65c64787-11f9-4c9d-9013-4100b4418e24",
         image: "assets/oracle-one.svg",
         nombre: "Oracle Next Education: Back-end"
@@ -66,7 +71,7 @@ const certificados = [
         id: "assets/certificates.pdf",
         image: "assets/alura.svg",
         nombre: "Certificados Completos: Alura"
-    }
+    }    
 ];
 
 // Seleccionar el contenedor de certificados
