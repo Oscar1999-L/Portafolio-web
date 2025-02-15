@@ -21,7 +21,7 @@
 
 body{
     box-sizing: border-box;
-    background-color: var(--color-secundario);
+    background-color: #e0e1dd;
     color: var(--color-primario);
 }
 
