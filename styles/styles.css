@@ -3,7 +3,7 @@
 /* Son atajos tipo constantes */
 :root {
     --color-primario: #000000;
-    --color-secundario: #8aa89d;
+    --color-secundario: #e0e1dd;
     --color-terciario: #abff77;
     --color-hover: #000000;
 
@@ -21,7 +21,7 @@
 
 body{
     box-sizing: border-box;
-    background-color: #e0e1dd;
+    background-color: var(--color-secundario);
     color: var(--color-primario);
 }
 
