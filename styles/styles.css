@@ -4,7 +4,7 @@
 :root {
     --color-primario: #000000;
     --color-secundario: #e0e1dd;
-    --color-terciario: #abff77;
+    --color-terciario: #415a77;
     --color-hover: #000000;
 
     --fuente-krona: 'Krona One', sans-serif;
@@ -265,7 +265,7 @@ body{
 .conocimiento-item {
     background-color: var(--color-secundario);
     border-radius: 8px;
-    padding: 20px; /* 🔥 Más espacio interno */
+    padding: 20px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     flex: 1 1 calc(12.5% - 20px); /* 8 columnas en escritorio */
