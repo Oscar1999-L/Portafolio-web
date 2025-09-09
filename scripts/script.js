@@ -214,7 +214,7 @@ const conocimientos = [
         image: "assets/logos/php.png",
         nombre: "PHP"
     },{
-        image: "assets/logos/scriptcase.png",
+        image: "assets/logos/scriptcase.jpg",
         nombre: "Scriptcase"
     }
 ]
