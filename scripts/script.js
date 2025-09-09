@@ -130,7 +130,15 @@ const proyectos = [
         descripcion: "La API proporciona operaciones CRUD (Crear, Leer, Actualizar, Eliminar) para gestionar publicaciones en la plataforma. Además, implementa medidas "+
         "de seguridad utilizando Spring Security y validaciones mediante tokens JWT para verificar la validez de los usuarios. Utilizando las tecnologías de Java, Spring boot, MySQL.",
         nombre: "Foro Hub"
-    }]
+    },
+    {
+        id: "",
+        image: "assets/logos/python.png",
+        descripcion: "Esta es una aplicación web basada en Python como estructura principal y HTML, JavaScript y CSS como front. Esta aplicación cuenta con diferentes herramientas de procesamiento de pdf," +
+            " conversor de xml a pdf, un firmado automático, procesador de colores, entre otras herramientas. Esta aplicación es privada por lo que no puedo poner su enlace.",
+        nombre: "CONVERSOR PDF"
+    },
+    ]
 
     // Seleccionar el contenedor de proyectos
 const contenedorProyectos = document.querySelector("#contenedorProyectos");
@@ -199,6 +207,15 @@ const conocimientos = [
     },{
         image: "assets/logos/github.svg",
         nombre: "GitHub"
+    },{
+        image: "assets/logos/Linux.png",
+        nombre: "Servidores Linux"
+    },{
+        image: "assets/logos/php.png",
+        nombre: "PHP"
+    },{
+        image: "assets/logos/scriptcase.png",
+        nombre: "Scriptcase"
     }
 ]
 
